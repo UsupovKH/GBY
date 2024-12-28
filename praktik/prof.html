@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пользовательский интерфейс</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input {
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        address {
+            font-style: normal; /* Убираем курсив */
+        }
+
+        ul {
+            list-style-type: none; /* Убираем маркеры */
+            padding-left: 0; /* Убираем отступ */
+        }
+
+        ul li {
+            margin-bottom: 10px; /* Отступ между элементами списка */
+        }
+    </style>
+</head>
+<body>
+    <header style="text-align: center;">
+    <h1 style="display: flex; align-items: center; justify-content: center;">
+        <img src="https://helpinver.com/upload/iblock/e3f/logotip.jpg" alt="" style="height: 50px; margin-right: 10px;">
+        Добро пожаловать на сайт 
+    </h1> 
+    <h1>ГБУ "Гвардейский социально-реабилитационный центр" на 90 мест</h1> 
+    <nav> 
+        <a href="#home">На начало</a> 
+        <a href="#registration">Регистрация</a> 
+        <a href="#about">О компании</a> 
+        <a href="#contacts">Контакты</a> 
+        <a href="#interns">Практикантам</a> 
+        <a href="prof6.html">Форма для связи</a> 
+    </nav> 
+</header>
+
+
+
+    <section id="registration">
+        <h2>Регистрация</h2>
+        <form id="registration-form">
+            <label for="username">Логин:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Войти/Зарегистрироваться</button>
+        </form>
+    </section>
+
+    <section id="about">
+        <h2>О компании</h2>
+        <p>Наша компания занимается разработкой программного обеспечения и предоставляет высококачественные услуги.</p>
+        <button onclick="showMoreInfo()">Узнать больше</button>
+        <div id="more-info" style="display:none;">
+            <p>Мы работаем на рынке более 10 лет и имеем множество довольных клиентов.</p>
+        </div>
+    </section>
+
+    <section id="contacts">
+        <h2>Контакты</h2>
+        <address>
+            <p>Адрес: с. Гвардейское, Центральная усадьба, 1 </p>
+            <p>Телефон: +7 (963) 700-34-63</p>
+            <p>Email: gsrtsn@mail.ru</p>
+        </address>
+    </section>
+
+    <section id="interns">
+        <h2>Практикантам</h2>
+        <ul>
+            <li><a href="prof2.html">Функции в JavaScript</a></li>
+            <li><a href="prof3.html">Растровая графика</a></li>
+            <li><a href="prof4.html">Векторная графика</a></li>
+            <li><a href="prof5.html">Трехмерная графика</a></li>
+        </ul>
+    </section>
+
+    <script>
+        function showMoreInfo() {
+            var moreInfo = document.getElementById("more-info");
+            if (moreInfo.style.display === "none") {
+                moreInfo.style.display = "block";
+                event.target.textContent = "Скрыть информацию"; // Изменяем текст кнопки
+            } else {
+                moreInfo.style.display = "none";
+                event.target.textContent = "Узнать больше"; // Возвращаем текст кнопки
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Функции в JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2, h3 {
+            color: #4CAF50;
+        }
+
+        pre {
+            background-color: #f9f9f9;
+            border-left: 4px solid #4CAF50;
+            padding: 10px;
+            overflow-x: auto; /* Позволяет прокручивать длинные строки */
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Изучение JavaScript</h1>
+</header>
+
+<section>
+    <h3>Функции в JavaScript</h3>
+    <p>Функция, которая принимает массив чисел и возвращает количество четных элементов, расположенных выше главной диагонали:</p>
+    <pre><code>
+function countEvenAboveDiagonal(matrix) {
+    let count = 0; // Начинаем с нуля
+    for (let i = 0; i &lt; matrix.length; i++) {
+        for (let j = i + 1; j &lt; matrix[i].length; j++) {
+            if (matrix[i][j] % 2 === 0) {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+    </code></pre>
+
+    <h2>Пример использования функции:</h2>
+    <pre><code>
+const matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+console.log(countEvenAboveDiagonal(matrix)); // Вывод: 1 (только число 6)
+    </code></pre>
+
+    <ul>
+        <li><a href="prof.html">Назад на главную</a></li>
+    </ul>
+</section>
+
+<footer>
+    <p>&copy; 2024 Изучение JavaScript</p>
+</footer>
+
+</body>
+</html>

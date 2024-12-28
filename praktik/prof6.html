@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #4CAF50; /* Цвет заголовка */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px; /* Максимальная ширина секции */
+            margin: 20px auto; /* Центрирование секции */
+            padding: 20px; /* Внутренний отступ */
+            background: white; /* Цвет фона секции */
+            border-radius: 8px; /* Закругление углов */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень */
+        }
+
+        h2 {
+            color: #4CAF50; /* Цвет заголовков */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column; /* Вертикальная ориентация элементов формы */
+        }
+
+        label {
+            margin-bottom: 5px; /* Отступ снизу для меток */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 10px; /* Внутренний отступ */
+            margin-bottom: 15px; /* Отступ снизу */
+            border: 1px solid #ccc; /* Цвет бордюра */
+            border-radius: 4px; /* Закругление углов */
+            font-size: 16px; /* Размер шрифта */
+        }
+
+        button {
+            background-color: #4CAF50; /* Цвет кнопки */
+            color: white; /* Цвет текста кнопки */
+            padding: 10px; /* Внутренний отступ */
+            border: none; /* Убрать бордер */
+            border-radius: 4px; /* Закругление углов */
+            font-size: 16px; /* Размер шрифта */
+            cursor: pointer; /* Курсор при наведении */
+            margin-bottom: 10px; /* Отступ снизу для кнопки */
+        }
+
+        button:hover {
+            background-color: #45a049; /* Темнее при наведении */
+        }
+
+        .back-button {
+            background-color: #ccc; /* Цвет кнопки "Назад" */
+            color: black; /* Цвет текста кнопки "Назад" */
+        }
+
+        .back-button:hover {
+            background-color: #bbb; /* Темнее при наведении на кнопку "Назад" */
+        }
+
+        footer {
+            text-align: center; /* Центрирование текста в подвале */
+            margin-top: 20px; /* Отступ сверху */
+            padding: 10px 0; /* Внутренний отступ */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Форма обратной связи</h1>
+</header>
+
+<section>
+    <h2>Свяжитесь с нами</h2>
+    <form action="#" method="post">
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Сообщение:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Отправить</button>
+        <button type="button" class="back-button" onclick="window.history.back();">Назад</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 Форма обратной связи</p>
+</footer>
+
+</body>
+</html>
